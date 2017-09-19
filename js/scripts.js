@@ -5,14 +5,15 @@ $(document).ready(function() {
     sentence.forEach(function(word) {
       var userInput = $("input#" + word).val();
 
+    console.log(userInput);
 
       var splitted = userInput.split(" ");
       splitted.forEach(function(split) {
         newSentence.push(split);
       });
-
-
     });
+
+    console.log(newSentence);
 
     var bigwords = [];
     // console.log(newSentence);
@@ -24,14 +25,11 @@ $(document).ready(function() {
       }
     });
 
-
+    console.log(newSentence);
 
     var bigwords2 = bigwords.reverse().join(" ");
     alert(bigwords2);
 
-
-
     event.preventDefault();
-
     });
   });
